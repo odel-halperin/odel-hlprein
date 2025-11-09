@@ -2,22 +2,23 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <title>אדל הלפרין – סודות המטבח האיראני</title>
+  <title>אדל הלפרין – סיפורי טעם ונשמה</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="אדל הלפרין – סודות המטבח האיראני. מתכונים ביתיים, מסורת וטעם של בית חמים." />
+  <meta name="description" content="אדל הלפרין – סיפורי טעם ונשמה. מתכונים ביתיים, מטבח איראני חם וסיפורי אוכל מהלב." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #fff8f0;
+      --bg: #fff8f4;
       --card: #ffffff;
       --ink: #3a3a3a;
       --muted: #6b6b6b;
-      --accent: #c97a40;
-      --accent-soft: #ffe1c4;
-      --accent-dark: #7a431e;
+      --accent: #e3a27a;
+      --accent-soft: #ffe3d1;
+      --accent-dark: #a15a34;
+      --border-soft: #f3d3b7;
     }
 
     * { box-sizing: border-box; }
@@ -33,12 +34,12 @@
     a:hover { text-decoration: underline; }
 
     header {
-      background: linear-gradient(135deg, #ffe8d2, #ffd3b0);
-      border-bottom: 1px solid #f0c8a1;
+      background: linear-gradient(135deg,#ffe8dd,#ffd6c0);
+      border-bottom: 1px solid var(--border-soft);
       padding: 16px;
     }
     .header-inner {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -70,7 +71,6 @@
       font-size: 14px;
       color: var(--muted);
     }
-
     .nav-links {
       display: flex;
       gap: 10px;
@@ -80,145 +80,160 @@
     .nav-links a {
       padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.8);
       border: 1px solid rgba(255,255,255,0.9);
     }
 
     main {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 20px 16px 40px;
+      padding: 22px 16px 40px;
     }
 
+    /* HERO – תמונה + כותרת + סיפור קצר */
     .hero {
       background: var(--card);
-      border-radius: 18px;
-      padding: 20px 18px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-      margin-bottom: 24px;
-      border: 1px solid #f2e2d2;
+      border-radius: 20px;
+      padding: 22px 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-soft);
+      margin-bottom: 26px;
     }
-    .hero-tag {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-      margin-bottom: 8px;
-      font-weight: 600;
+    .hero-top {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    .hero h1 {
-      margin: 6px 0 4px;
+    .hero-profile {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #f5c3a1;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+    .hero-profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-text h1 {
+      margin: 0 0 4px;
       font-size: 26px;
       color: var(--accent-dark);
     }
-    .hero h2 {
-      margin: 4px 0 10px;
+    .hero-text h2 {
+      margin: 0 0 8px;
       font-size: 18px;
       color: var(--ink);
     }
-    .hero p {
-      margin: 0 0 10px;
+    .hero-tagline {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .hero-body {
+      margin-top: 14px;
+      font-size: 15px;
       color: var(--muted);
       line-height: 1.8;
+    }
+
+    /* כרטיסים – מתכונים */
+    .section-title {
+      margin: 26px 0 12px;
+      font-size: 20px;
+      color: var(--accent-dark);
+    }
+    .recipes-grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .recipes-grid {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+      }
+    }
+    .recipe-card {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      padding: 10px 10px 12px;
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .recipe-card img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      max-height: 120px;
+    }
+    .recipe-card strong {
+      color: var(--accent-dark);
       font-size: 15px;
     }
 
-    .layout-two {
-      display: grid;
-      gap: 18px;
-      margin-top: 10px;
-    }
-    @media (min-width: 720px) {
-      .layout-two {
-        grid-template-columns: 1.3fr 1fr;
-      }
+    .recipe-card .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 2px;
     }
 
+    /* מתכון חורש סבזי – כרטיס גדול */
+    .khoresh-wrapper {
+      margin-top: 26px;
+      display: grid;
+      gap: 18px;
+    }
+    @media (min-width: 720px) {
+      .khoresh-wrapper {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
     .card {
       background: var(--card);
       border-radius: 18px;
       padding: 18px 16px;
-      border: 1px solid #f2e2d2;
+      border: 1px solid var(--border-soft);
       box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
     }
     .card h3 {
       margin: 0 0 8px;
       font-size: 18px;
       color: var(--accent-dark);
     }
-    .card p {
-      margin: 0 0 6px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-    .card ul {
+    .card ul, .card ol {
       margin: 0;
       padding-right: 18px;
-      font-size: 15px;
-      line-height: 1.7;
     }
-    .card li + li {
-      margin-top: 3px;
-    }
-    .card ol {
-      margin: 0;
-      padding-right: 18px;
-      font-size: 15px;
-      line-height: 1.7;
-    }
-    .card ol li + li {
-      margin-top: 4px;
-    }
-
-    .section-title {
-      margin: 26px 0 10px;
-      font-size: 20px;
-      color: var(--accent-dark);
-    }
-
-    .recipes-grid {
-      display: grid;
-      gap: 14px;
-    }
-    @media (min-width: 720px) {
-      .recipes-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-    .recipe-mini {
-      background: #fffaf5;
-      border-radius: 14px;
-      padding: 12px;
-      border: 1px dashed #f0c8a1;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .recipe-mini strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--accent-dark);
-      font-size: 15px;
-    }
+    .card li + li { margin-top: 3px; }
 
     .contact {
-      margin-top: 26px;
+      margin-top: 30px;
       font-size: 15px;
       color: var(--muted);
     }
-    .contact p {
-      margin: 4px 0;
-    }
+    .contact p { margin: 4px 0; }
 
     footer {
-      border-top: 1px solid #f0c8a1;
+      border-top: 1px solid var(--border-soft);
       padding: 10px 16px 16px;
       font-size: 13px;
       text-align: center;
       color: var(--muted);
-      background: #fff3e4;
+      background: #ffeede;
     }
   </style>
 </head>
@@ -229,53 +244,90 @@
     <div class="logo-title">
       <div class="logo-circle">א</div>
       <div>
-        <div class="site-title">אדל הלפרין – סודות המטבח האיראני</div>
-        <div class="site-sub">לטעום את המסורת, לאהוב את הפשטות</div>
+        <div class="site-title">אדל הלפרין – סיפורי טעם ונשמה</div>
+        <div class="site-sub">מטבח איראני חם, ביתי ומלא אהבה</div>
       </div>
     </div>
     <nav class="nav-links">
-      <a href="#about">עליי</a>
-      <a href="#recipe">מתכון השבוע</a>
-      <a href="#more">עוד מתכונים</a>
+      <a href="#top">דף הבית</a>
+      <a href="#recipes">מתכונים</a>
+      <a href="#khoresh">חורש סבזי</a>
       <a href="#contact">יצירת קשר</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="hero" id="about">
-    <span class="hero-tag">ברוכים הבאים למטבח שלי</span>
-    <h1>אדל הלפרין</h1>
-    <h2>מטבח איראני חם, ביתי ומלא נשמה</h2>
-    <p>
-      שמי אדל הלפרין, והמטבח הוא המקום שבו אני יוצרת באהבה.
-      אני אוהבת לבשל ולאפות, במיוחד מאכלים מזרחיים צבעוניים ומלאי חיים.
-      כך נולד החיבור הקסום בין מטבחי המזרח והמערב – שילוב של טעמים, מסורת ואהבה.
-    </p>
-    <p>
-      לצד זאת, בעלי שמוצאו אשכנזי-אירופאי, לימד אותי את סודות המטבח היהודי המסורתי של עולם המערב.
-      בכל יום, ילדיי מחכים בקוצר רוח לסוף הלימודים, רק כדי להתענג על המנות הביתיות שאני מכינה עבורם מכל הלב.
-    </p>
-    <p>
-      עבורי, כל רגע במטבח הוא חוויה, וכל מתכון מספר סיפור. אני מזמינה אתכם להצטרף אליי למסע קולינרי
-      מרגש של טעמים, מסורת וחום ביתי.
-    </p>
+<main id="top">
+  <!-- HERO: תמונה + סיפור קצר -->
+  <section class="hero">
+    <div class="hero-top">
+      <div class="hero-profile">
+        <img src="images/adel-profile.jpg" alt="אדל הלפרין" />
+      </div>
+      <div class="hero-text">
+        <h1>אדל הלפרין</h1>
+        <h2>מטבח איראני ביתי וסיפורי טעם מהלב</h2>
+        <div class="hero-tagline">
+          כאן אני משלבת בין מתכונים חמים, מסורת משפחתית והרבה נשמה טובה.
+        </div>
+      </div>
+    </div>
+    <div class="hero-body">
+      במטבח שלי אני אוהבת לחבר בין טעמים מזרחיים עשירים לבין פשטות יומיומית.
+      הילדים מחכים כל יום לחזור הביתה ולטעום מהסירים, ואני מאמינה שאוכל טוב הוא קודם כל אהבה.
+      באתר הזה אני מזמינה אתכם להיכנס לסיפורי הטעם שלי, צעד אחר צעד, עם מתכונים שאפשר להכין גם באמצע יום עמוס.
+    </div>
   </section>
 
-  <section id="recipe">
-    <h2 class="section-title">מתכון השבוע – חורש סבזי</h2>
-    <div class="layout-two">
+  <!-- כרטיסים קטנים – מתכונים -->
+  <section id="recipes">
+    <h2 class="section-title">כרטיסי מתכון – סיפורי טעם קטנים</h2>
+    <div class="recipes-grid">
+      <!-- כרטיס 1 – עם תמונת האוכל שלך -->
+      <article class="recipe-card">
+        <span class="tag">מתכון ביתי</span>
+        <img src="images/food-main.jpg" alt="תבשיל ביתי של אדל" />
+        <strong>תבשיל ביתי מנחם</strong>
+        <span>מנה חמה, מלאה ירקות וטעם של בית. מושלם ליום חורף או לארוחת ערב משפחתית.</span>
+      </article>
+
+      <!-- כרטיס 2 -->
+      <article class="recipe-card">
+        <span class="tag">בקרוב</span>
+        <strong>מרק ירקות ליום גשום</strong>
+        <span>מרק עשיר וקל להכנה, עם ירקות צבעוניים והרבה נשמה.</span>
+      </article>
+
+      <!-- כרטיס 3 -->
+      <article class="recipe-card">
+        <span class="tag">בקרוב</span>
+        <strong>עוגיות שבת</strong>
+        <span>עוגיות פריכות וקלה להכנה, שהופכות את שבת בבוקר לחגיגה קטנה.</span>
+      </article>
+
+      <!-- כרטיס 4 -->
+      <article class="recipe-card">
+        <span class="tag">בקרוב</span>
+        <strong>אורז חגיגי עם שקדים</strong>
+        <span>אורז לבן רך עם שקדים וצימוקים – בדיוק כמו באירועים המשפחתיים.</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- מתכון חורש סבזי – כרטיס גדול -->
+  <section id="khoresh">
+    <h2 class="section-title">מתכון מיוחד – חורש סבזי</h2>
+    <div class="khoresh-wrapper">
       <article class="card">
         <h3>מצרכים</h3>
         <ul>
           <li>500 גרם בשר בקר (כתף או צלעות, חתוך לקוביות)</li>
           <li>בצל גדול אחד, קצוץ דק</li>
-          <li>3 כפות שמן (קנולה או זית)</li>
-          <li>2 כוסות עשבי תיבול קצוצים:
-            כוסברה, פטרוזיליה, בצל ירוק ושמיר</li>
+          <li>3 כפות שמן</li>
+          <li>2 כוסות עשבי תיבול קצוצים – כוסברה, פטרוזיליה, בצל ירוק ושמיר</li>
           <li>5–6 עלי חילבה קצוצים (לא חובה)</li>
-          <li>1/2 כוס שעועית לימה או שעועית אדומה (מושרה מראש למשך לילה)</li>
-          <li>2–3 לימונים פרסיים מיובשים (לימו עומאני) או 2 כפות מיץ לימון</li>
+          <li>1/2 כוס שעועית לימה או אדומה (מושרה מראש)</li>
+          <li>2–3 לימונים פרסיים מיובשים או 2 כפות מיץ לימון</li>
           <li>1 כפית כורכום</li>
           <li>מלח ופלפל שחור לפי הטעם</li>
           <li>3 כוסות מים חמים</li>
@@ -285,47 +337,29 @@
       <article class="card">
         <h3>אופן ההכנה</h3>
         <ol>
-          <li>מחממים 2 כפות שמן בסיר גדול ומטגנים את הבצל עד להזהבה.</li>
-          <li>מוסיפים את קוביות הבשר, מטגנים עד שהן משחימות מעט, ואז מוסיפים כורכום ומערבבים היטב.</li>
-          <li>יוצקים את המים החמים לסיר, מוסיפים את השעועית, מכסים ומבשלים על אש נמוכה כשעה וחצי–שעתיים עד שהבשר רך.</li>
-          <li>בינתיים, מחממים במחבת כף שמן, מוסיפים את עשבי התיבול ומטגנים על אש נמוכה כ־10 דקות תוך ערבוב מתמיד.</li>
-          <li>מוסיפים את העשבים המטוגנים לסיר יחד עם הלימונים הפרסיים, המלח והפלפל. ממשיכים לבשל עוד כ־40 דקות עד שהטעמים נספגים.</li>
-          <li>טועמים ומתקנים תיבול לפי הצורך.</li>
+          <li>מטגנים בצל בשמן עד הזהבה.</li>
+          <li>מוסיפים את הבשר ומטגנים עד שמקבל צבע, מוסיפים כורכום ומערבבים.</li>
+          <li>מוסיפים מים חמים ושעועית, מכסים ומבשלים כשעה וחצי–שעתיים עד שהבשר מתרכך.</li>
+          <li>במחבת נפרדת מטגנים את עשבי התיבול כ־10 דקות על אש נמוכה.</li>
+          <li>מוסיפים לסיר את העשבים, הלימונים הפרסיים, מלח ופלפל ומבשלים עוד כ־40 דקות.</li>
+          <li>טועמים ומתקנים תיבול. מגישים חם לצד אורז פרסי לבן.</li>
         </ol>
-        <p><strong>להגשה:</strong> מגישים חם לצד אורז פרסי לבן (צ'לו), ואפשר להוסיף טהדיג קריספי.</p>
-        <p><strong>מושלם ליום חורפי וגשום – בתיאבון!</strong></p>
+        <p><strong>תבשיל עמוק, ירוק ומלא ריח של בית. בתיאבון ♥</strong></p>
       </article>
     </div>
   </section>
 
-  <section id="more">
-    <h2 class="section-title">עוד מתכונים בדרך...</h2>
-    <div class="recipes-grid">
-      <div class="recipe-mini">
-        <strong>מתכון 2 – בקרוב</strong>
-        רעיון למרק, תבשיל או קינוח אהוב שתוסיפי בהמשך.
-      </div>
-      <div class="recipe-mini">
-        <strong>מתכון 3 – בקרוב</strong>
-        כאן אפשר יהיה להוסיף קישור לעמוד מתכון נוסף.
-      </div>
-      <div class="recipe-mini">
-        <strong>מתכון 4 – בקרוב</strong>
-        עוד מנה מהמטבח האיראני או היהודי–אירופאי המשפחתי.
-      </div>
-    </div>
-  </section>
-
+  <!-- יצירת קשר -->
   <section id="contact" class="contact">
     <h2 class="section-title">ליצירת קשר</h2>
-    <p>אשמח לשיתופים, שאלות ומתכונים אהובים מהבית שלכם.</p>
+    <p>אשמח לשיתופים, רעיונות ומתכונים אהובים מהמטבח שלכם.</p>
     <p><strong>טלפון:</strong> 058-7163206</p>
     <p><strong>אימייל:</strong> <a href="mailto:odel3206@gmail.com">odel3206@gmail.com</a></p>
   </section>
 </main>
 
 <footer>
-  © אדל הלפרין – סודות המטבח האיראני
+  © אדל הלפרין – סיפורי טעם ונשמה
 </footer>
 
 </body>
