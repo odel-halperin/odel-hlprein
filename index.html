@@ -1,97 +1,332 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>אדל הלפרין - סודות המטבח האיראני</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="utf-8" />
+  <title>אדל הלפרין – סודות המטבח האיראני</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="אדל הלפרין – סודות המטבח האיראני. מתכונים ביתיים, מסורת וטעם של בית חמים." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fff8f0;
+      --card: #ffffff;
+      --ink: #3a3a3a;
+      --muted: #6b6b6b;
+      --accent: #c97a40;
+      --accent-soft: #ffe1c4;
+      --accent-dark: #7a431e;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Heebo', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    a { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(135deg, #ffe8d2, #ffd3b0);
+      border-bottom: 1px solid #f0c8a1;
+      padding: 16px;
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--accent-dark);
+      border: 2px solid #f3b27b;
+    }
+    .site-title {
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .site-sub {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .nav-links a {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.9);
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    .hero {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 20px 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
+      border: 1px solid #f2e2d2;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .hero h1 {
+      margin: 6px 0 4px;
+      font-size: 26px;
+      color: var(--accent-dark);
+    }
+    .hero h2 {
+      margin: 4px 0 10px;
+      font-size: 18px;
+      color: var(--ink);
+    }
+    .hero p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .layout-two {
+      display: grid;
+      gap: 18px;
+      margin-top: 10px;
+    }
+    @media (min-width: 720px) {
+      .layout-two {
+        grid-template-columns: 1.3fr 1fr;
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 18px 16px;
+      border: 1px solid #f2e2d2;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--accent-dark);
+    }
+    .card p {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .card ul {
+      margin: 0;
+      padding-right: 18px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .card li + li {
+      margin-top: 3px;
+    }
+    .card ol {
+      margin: 0;
+      padding-right: 18px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .card ol li + li {
+      margin-top: 4px;
+    }
+
+    .section-title {
+      margin: 26px 0 10px;
+      font-size: 20px;
+      color: var(--accent-dark);
+    }
+
+    .recipes-grid {
+      display: grid;
+      gap: 14px;
+    }
+    @media (min-width: 720px) {
+      .recipes-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    .recipe-mini {
+      background: #fffaf5;
+      border-radius: 14px;
+      padding: 12px;
+      border: 1px dashed #f0c8a1;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .recipe-mini strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent-dark);
+      font-size: 15px;
+    }
+
+    .contact {
+      margin-top: 26px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .contact p {
+      margin: 4px 0;
+    }
+
+    footer {
+      border-top: 1px solid #f0c8a1;
+      padding: 10px 16px 16px;
+      font-size: 13px;
+      text-align: center;
+      color: var(--muted);
+      background: #fff3e4;
+    }
+  </style>
 </head>
-<body class="is-preload">
-    <div id="page-wrapper">
-        <!-- Header -->
-        <header id="header">
-            <h1><a href="index.html" id="logo">אדל הלפרין <em>סודות המטבח האיראני</em></a></h1>
-            <nav id="nav">
-                <ul>
-                    <li class="current"><a href="no-sidebar.html">לטעום את המסורת, לאהוב את הפשטות</a></li>
-                </ul>
-            </nav>
-        </header>
+<body>
 
-        <!-- Main -->
-        <section class="wrapper style1">
-            <div class="container">
-                <div id="content">
-                    <article>
-                        <header>
-                            <h2>חורש זבזי - טעים ובריא</h2>
-                            <p>מתכון מושלם ליום חורפי, גשום וקריר</p>
-                        </header>
-
-                        <span class="image featured"><img src="images/banner.jpg" alt="חורש זבזי" /></span>
-
-                        <p>
-                            שמי אדל הלפרין, והמטבח הוא המקום שבו אני יוצרת באהבה. אני אוהבת לבשל ולאפות, במיוחד מאכלים מזרחיים צבעוניים ומלאי חיים.
-                            כך נולד החיבור הקסום בין מטבחי המזרח והמערב – שילוב של טעמים, מסורת ואהבה.
-                            לצד זאת, בעלי היקר, שמוצאו אשכנזי-אירופאי, לימד אותי את סודות המטבח היהודי המסורתי של עולם המערב.
-                            בכל יום, ילדיי מחכים בקוצר רוח לסוף הלימודים, רק כדי להתענג על המנות הביתיות שאני מכינה עבורם מכל הלב.
-                            עבורי, כל רגע במטבח הוא חוויה, וכל מתכון מספר סיפור.
-                            אני מזמינה אתכם להצטרף אליי למסע קולינרי מרגש של טעמים, מסורת וחום ביתי. ✨ בואו לבשל איתי, לטעום וליהנות! ✨
-                        </p>
-
-                        <h3><u>מצרכים:</u></h3>
-                        <ul>
-                            <li><strong>500 גרם בשר בקר</strong> (כתף או צלעות, חתוך לקוביות)</li>
-                            <li><strong>1 בצל גדול</strong>, קצוץ דק</li>
-                            <li><strong>3 כפות שמן</strong> (קנולה/זית)</li>
-                            <li><strong>2 כוסות עשבי תיבול קצוצים:</strong> כוסברה, פטרוזיליה, בצל ירוק ושמיר</li>
-                            <li><strong>5-6 עלי חילבה קצוצים</strong> (לא חובה)</li>
-                            <li><strong>1/2 כוס שעועית לימה או שעועית אדומה</strong> (מושרה מראש למשך לילה)</li>
-                            <li><strong>2-3 לימונים פרסיים מיובשים (לימו עומאני)</strong> – ניתן לחורר אותם בעדינות או להחליף ב-2 כפות מיץ לימון</li>
-                            <li><strong>1 כפית כורכום</strong></li>
-                            <li><strong>מלח ופלפל שחור</strong> לפי הטעם</li>
-                            <li><strong>3 כוסות מים חמים</strong></li>
-                        </ul>
-
-                        <h3><b>אופן ההכנה:</b></h3>
-                        <ol>
-                            <li>מחממים 2 כפות שמן בסיר גדול ומטגנים את הבצל עד להזהבה.</li>
-                            <li>מוסיפים את קוביות הבשר, מטגנים עד שהן משחימות מעט, ואז מוסיפים כורכום ומערבבים היטב.</li>
-                            <li>יוצקים את המים החמים לסיר, מוסיפים את השעועית, מכסים ומבשלים על אש נמוכה כשעה וחצי עד שעתיים, עד שהבשר רך.</li>
-                            <li>בינתיים, מחממים במחבת כף שמן נוספת, מוסיפים את עשבי התיבול ומטגנים על אש נמוכה כ-10 דקות תוך ערבוב מתמיד.</li>
-                            <li>מוסיפים את העשבים המטוגנים לסיר יחד עם הלימונים הפרסיים, מלח ופלפל. ממשיכים לבשל עוד 40 דקות לפחות, עד שהטעמים נספגים והתבשיל מסמיך.</li>
-                            <li>טועמים ומתקנים תיבול לפי הצורך.</li>
-                        </ol>
-
-                        <h3><u>להגשה:</u></h3>
-                        <ul>
-                            <li>מגישים חם לצד אורז פרסי לבן (צ'לו).</li>
-                            <li>למקסום החוויה, אפשר להגיש גם עם טהדיג קריספי.</li>
-                        </ul>
-
-                        <p>✨ תבשיל מושלם ליום חורפי וגשום! בתיאבון 😋</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="container">
-                <h3>ליצירת קשר:</h3>
-                <p>אדל הלפרין</p>
-                <p>📞 058-7163206</p>
-                <p>📧 odel3206@gmail.com</p>
-            </div>
-        </footer>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.dropotron.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+<header>
+  <div class="header-inner">
+    <div class="logo-title">
+      <div class="logo-circle">א</div>
+      <div>
+        <div class="site-title">אדל הלפרין – סודות המטבח האיראני</div>
+        <div class="site-sub">לטעום את המסורת, לאהוב את הפשטות</div>
+      </div>
     </div>
+    <nav class="nav-links">
+      <a href="#about">עליי</a>
+      <a href="#recipe">מתכון השבוע</a>
+      <a href="#more">עוד מתכונים</a>
+      <a href="#contact">יצירת קשר</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="about">
+    <span class="hero-tag">ברוכים הבאים למטבח שלי</span>
+    <h1>אדל הלפרין</h1>
+    <h2>מטבח איראני חם, ביתי ומלא נשמה</h2>
+    <p>
+      שמי אדל הלפרין, והמטבח הוא המקום שבו אני יוצרת באהבה.
+      אני אוהבת לבשל ולאפות, במיוחד מאכלים מזרחיים צבעוניים ומלאי חיים.
+      כך נולד החיבור הקסום בין מטבחי המזרח והמערב – שילוב של טעמים, מסורת ואהבה.
+    </p>
+    <p>
+      לצד זאת, בעלי שמוצאו אשכנזי-אירופאי, לימד אותי את סודות המטבח היהודי המסורתי של עולם המערב.
+      בכל יום, ילדיי מחכים בקוצר רוח לסוף הלימודים, רק כדי להתענג על המנות הביתיות שאני מכינה עבורם מכל הלב.
+    </p>
+    <p>
+      עבורי, כל רגע במטבח הוא חוויה, וכל מתכון מספר סיפור. אני מזמינה אתכם להצטרף אליי למסע קולינרי
+      מרגש של טעמים, מסורת וחום ביתי.
+    </p>
+  </section>
+
+  <section id="recipe">
+    <h2 class="section-title">מתכון השבוע – חורש סבזי</h2>
+    <div class="layout-two">
+      <article class="card">
+        <h3>מצרכים</h3>
+        <ul>
+          <li>500 גרם בשר בקר (כתף או צלעות, חתוך לקוביות)</li>
+          <li>בצל גדול אחד, קצוץ דק</li>
+          <li>3 כפות שמן (קנולה או זית)</li>
+          <li>2 כוסות עשבי תיבול קצוצים:
+            כוסברה, פטרוזיליה, בצל ירוק ושמיר</li>
+          <li>5–6 עלי חילבה קצוצים (לא חובה)</li>
+          <li>1/2 כוס שעועית לימה או שעועית אדומה (מושרה מראש למשך לילה)</li>
+          <li>2–3 לימונים פרסיים מיובשים (לימו עומאני) או 2 כפות מיץ לימון</li>
+          <li>1 כפית כורכום</li>
+          <li>מלח ופלפל שחור לפי הטעם</li>
+          <li>3 כוסות מים חמים</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>אופן ההכנה</h3>
+        <ol>
+          <li>מחממים 2 כפות שמן בסיר גדול ומטגנים את הבצל עד להזהבה.</li>
+          <li>מוסיפים את קוביות הבשר, מטגנים עד שהן משחימות מעט, ואז מוסיפים כורכום ומערבבים היטב.</li>
+          <li>יוצקים את המים החמים לסיר, מוסיפים את השעועית, מכסים ומבשלים על אש נמוכה כשעה וחצי–שעתיים עד שהבשר רך.</li>
+          <li>בינתיים, מחממים במחבת כף שמן, מוסיפים את עשבי התיבול ומטגנים על אש נמוכה כ־10 דקות תוך ערבוב מתמיד.</li>
+          <li>מוסיפים את העשבים המטוגנים לסיר יחד עם הלימונים הפרסיים, המלח והפלפל. ממשיכים לבשל עוד כ־40 דקות עד שהטעמים נספגים.</li>
+          <li>טועמים ומתקנים תיבול לפי הצורך.</li>
+        </ol>
+        <p><strong>להגשה:</strong> מגישים חם לצד אורז פרסי לבן (צ'לו), ואפשר להוסיף טהדיג קריספי.</p>
+        <p><strong>מושלם ליום חורפי וגשום – בתיאבון!</strong></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="more">
+    <h2 class="section-title">עוד מתכונים בדרך...</h2>
+    <div class="recipes-grid">
+      <div class="recipe-mini">
+        <strong>מתכון 2 – בקרוב</strong>
+        רעיון למרק, תבשיל או קינוח אהוב שתוסיפי בהמשך.
+      </div>
+      <div class="recipe-mini">
+        <strong>מתכון 3 – בקרוב</strong>
+        כאן אפשר יהיה להוסיף קישור לעמוד מתכון נוסף.
+      </div>
+      <div class="recipe-mini">
+        <strong>מתכון 4 – בקרוב</strong>
+        עוד מנה מהמטבח האיראני או היהודי–אירופאי המשפחתי.
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">ליצירת קשר</h2>
+    <p>אשמח לשיתופים, שאלות ומתכונים אהובים מהבית שלכם.</p>
+    <p><strong>טלפון:</strong> 058-7163206</p>
+    <p><strong>אימייל:</strong> <a href="mailto:odel3206@gmail.com">odel3206@gmail.com</a></p>
+  </section>
+</main>
+
+<footer>
+  © אדל הלפרין – סודות המטבח האיראני
+</footer>
+
 </body>
 </html>
