@@ -2,39 +2,26 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <section style="display:flex; align-items:center; justify-content:center; gap:30px; background-color:#fafafa; padding:40px; border-radius:12px; margin:40px auto; max-width:900px;">
-  <div style="flex:1;">
-    <h2 style="font-family:'Segoe UI',sans-serif; color:#444;">חורש סבזי – טעם של נשמה</h2>
-    <p style="font-size:18px; color:#555; line-height:1.6;">
-      תבשיל פרסי מסורתי מלא ירוקים, שעועית אדומה ובשר רך שמתבשל שעות.
-      המנה הזו מסמלת ביתיות, עומק וטעמים של זיכרון – בדיוק כמו המסע שלי בעולם הבישול והנפש.
-    </p>
-  </div>
-  <img src=<img src="images/4e74c6a5-1e8c-4ed5-b79f-bc9c88b1a383.jpg" 
-     alt="Khorest Sabzi" 
-     style="flex:1; max-width:350px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-
-       alt="Khorest Sabzi" 
-       style="flex:1; max-width:350px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-</section>
-
   <title>אדל הלפרין – סיפורי טעם ונשמה</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="אדל הלפרין – סיפורי טעם ונשמה. מתכונים ביתיים, מטבח איראני חם וסיפורי אוכל מהלב." />
+  <meta name="description" content="אדל הלפרין – סיפורי טעם ונשמה. מטבח איראני ביתי, תבשילים חמים וסיפורי טעם מהלב." />
+
+  <!-- גופן יפה בעברית -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #fff8f4;
-      --card: #ffffff;
-      --ink: #3a3a3a;
-      --muted: #6b6b6b;
-      --accent: #e3a27a;
-      --accent-soft: #ffe3d1;
-      --accent-dark: #a15a34;
-      --border-soft: #f3d3b7;
+      --bg: #fff9f7;        /* ורוד עדין מאוד */
+      --card: #ffffff;      /* לבן לכרטיסים */
+      --ink: #414141;       /* טקסט כהה */
+      --muted: #7a7a7a;     /* טקסט משני */
+      --green: #4f8f7b;     /* ירוק אלגנטי */
+      --gold: #d9a44f;      /* זהב חם */
+      --pink-soft: #ffe3e0; /* ורוד עדין */
+      --gray-soft: #f1f2f4; /* אפור בהיר */
+      --border-soft: #ead4c5; /* מסגרת רכה */
     }
 
     * { box-sizing: border-box; }
@@ -46,16 +33,17 @@
       color: var(--ink);
     }
 
-    a { color: var(--accent-dark); text-decoration: none; }
+    a { color: var(--green); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* כותרת עליונה */
     header {
-      background: linear-gradient(135deg,#ffe8dd,#ffd6c0);
+      background: linear-gradient(135deg, #e9f5f0, #ffe6d8);
       border-bottom: 1px solid var(--border-soft);
-      padding: 16px;
+      padding: 14px 16px;
     }
     .header-inner {
-      max-width: 980px;
+      max-width: 1024px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -69,19 +57,20 @@
       gap: 10px;
     }
     .logo-circle {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
+      border: 2px solid var(--gold);
       background: #fff;
       display: grid;
       place-items: center;
       font-weight: 700;
-      color: var(--accent-dark);
-      border: 2px solid #f3b27b;
+      color: var(--green);
     }
     .site-title {
       font-weight: 700;
       font-size: 20px;
+      color: var(--green);
     }
     .site-sub {
       font-size: 14px;
@@ -96,79 +85,123 @@
     .nav-links a {
       padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.9);
       border: 1px solid rgba(255,255,255,0.9);
     }
 
     main {
-      max-width: 980px;
+      max-width: 1024px;
       margin: 0 auto;
       padding: 22px 16px 40px;
     }
 
-    /* HERO – תמונה + כותרת + סיפור קצר */
+    /* HERO – תמונה + טקסט עלייך */
     .hero {
       background: var(--card);
-      border-radius: 20px;
-      padding: 22px 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      border-radius: 22px;
+      padding: 22px 20px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.04);
       border: 1px solid var(--border-soft);
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
-    .hero-top {
+    .hero-inner {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       align-items: center;
       flex-wrap: wrap;
     }
-    .hero-profile {
-      width: 110px;
-      height: 110px;
+    .hero-photo {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid #f5c3a1;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 3px solid var(--gold);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       flex-shrink: 0;
     }
-    .hero-profile img {
+    .hero-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
     .hero-text h1 {
       margin: 0 0 4px;
-      font-size: 26px;
-      color: var(--accent-dark);
+      font-size: 28px;
+      color: var(--green);
     }
     .hero-text h2 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-size: 18px;
       color: var(--ink);
     }
-    .hero-tagline {
-      font-size: 14px;
-      color: var(--muted);
+    .hero-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--pink-soft);
+      color: var(--green);
+      font-size: 13px;
+      margin-bottom: 6px;
+      font-weight: 600;
     }
-    .hero-body {
-      margin-top: 14px;
+    .hero-text p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .section-title {
+      margin: 28px 0 10px;
+      font-size: 22px;
+      color: var(--green);
+    }
+
+    /* חורש סבזי – בלוק תמונה+טקסט */
+    .khoresh-block {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      padding: 22px 20px;
+      margin-bottom: 26px;
+    }
+    .khoresh-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+    .khoresh-text {
+      flex: 1 1 260px;
+    }
+    .khoresh-text p {
+      margin: 0 0 10px;
       font-size: 15px;
       color: var(--muted);
       line-height: 1.8;
     }
-
-    /* כרטיסים – מתכונים */
-    .section-title {
-      margin: 26px 0 12px;
-      font-size: 20px;
-      color: var(--accent-dark);
+    .khoresh-photo {
+      flex: 1 1 260px;
+      max-width: 360px;
     }
+    .khoresh-photo img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+
+    /* כרטיסי מתכונים קטנים */
     .recipes-grid {
       display: grid;
       gap: 16px;
+      margin-bottom: 28px;
     }
     @media (min-width: 720px) {
       .recipes-grid {
-        grid-template-columns: repeat(4, minmax(0,1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
     .recipe-card {
@@ -176,80 +209,67 @@
       border-radius: 16px;
       border: 1px solid var(--border-soft);
       box-shadow: 0 4px 14px rgba(0,0,0,0.03);
-      padding: 10px 10px 12px;
+      padding: 14px 14px 16px;
       font-size: 14px;
       color: var(--muted);
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-    .recipe-card img {
-      width: 100%;
-      border-radius: 12px;
-      object-fit: cover;
-      max-height: 120px;
-    }
-    .recipe-card strong {
-      color: var(--accent-dark);
-      font-size: 15px;
-    }
-
-    .recipe-card .tag {
+    .recipe-tag {
       display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
+      background: var(--gray-soft);
+      color: var(--green);
       padding: 2px 8px;
       border-radius: 999px;
       font-size: 12px;
-      margin-bottom: 2px;
+    }
+    .recipe-card strong {
+      font-size: 15px;
+      color: var(--ink);
     }
 
-    /* מתכון חורש סבזי – כרטיס גדול */
-    .khoresh-wrapper {
-      margin-top: 26px;
-      display: grid;
-      gap: 18px;
-    }
-    @media (min-width: 720px) {
-      .khoresh-wrapper {
-        grid-template-columns: 1.2fr 1fr;
-      }
-    }
-    .card {
+    /* עליי */
+    .about {
       background: var(--card);
-      border-radius: 18px;
-      padding: 18px 16px;
+      border-radius: 20px;
+      padding: 20px 18px;
       border: 1px solid var(--border-soft);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+      margin-bottom: 26px;
       font-size: 15px;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.8;
     }
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-      color: var(--accent-dark);
-    }
-    .card ul, .card ol {
-      margin: 0;
-      padding-right: 18px;
-    }
-    .card li + li { margin-top: 3px; }
 
+    /* יצירת קשר */
     .contact {
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 15px;
       color: var(--muted);
     }
     .contact p { margin: 4px 0; }
 
     footer {
+      margin-top: 30px;
       border-top: 1px solid var(--border-soft);
-      padding: 10px 16px 16px;
+      padding: 12px 16px 18px;
       font-size: 13px;
       text-align: center;
       color: var(--muted);
-      background: #ffeede;
+      background: #fdf7f3;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 18px 16px;
+      }
+      .hero-photo {
+        margin: 0 auto;
+      }
+      .hero-text h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -265,109 +285,95 @@
       </div>
     </div>
     <nav class="nav-links">
-      <a href="#top">דף הבית</a>
-      <a href="#recipes">מתכונים</a>
+      <a href="#home">דף הבית</a>
       <a href="#khoresh">חורש סבזי</a>
+      <a href="#recipes">מתכונים</a>
       <a href="#contact">יצירת קשר</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <!-- HERO: תמונה + סיפור קצר -->
+<main id="home">
+  <!-- HERO – את והתמונה מהספסל -->
   <section class="hero">
-    <div class="hero-top">
-      <div class="hero-profile">
-        <img src="images/adel-profile.jpg" alt="אדל הלפרין" />
+    <div class="hero-inner">
+      <div class="hero-photo">
+        <img src="images/adel-bench.jpg" alt="אדל הלפרין" />
       </div>
       <div class="hero-text">
+        <span class="hero-badge">סיפורי טעם מנשמה אחת</span>
         <h1>אדל הלפרין</h1>
-        <h2>מטבח איראני ביתי וסיפורי טעם מהלב</h2>
-        <div class="hero-tagline">
-          כאן אני משלבת בין מתכונים חמים, מסורת משפחתית והרבה נשמה טובה.
+        <h2>מטבח איראני ביתי – מקום שבו אוכל, זיכרון ונשמה נפגשים</h2>
+        <p>
+          כאן אני חולקת מתכונים מהמטבח האיראני והביתי שלי,
+          יחד עם סיפורי טעם קטנים מהיום-יום. כל סיר הוא זיכרון,
+          כל צלחת היא רגע של חום, וכל מתכון נולד מאהבה.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- חורש סבזי -->
+  <section id="khoresh">
+    <h2 class="section-title">חורש סבזי – טעם של נשמה</h2>
+    <div class="khoresh-block">
+      <div class="khoresh-inner">
+        <div class="khoresh-text">
+          <p>
+            חורש סבזי הוא אחד התבשילים הכי עמוקים ומנחמים במטבח האיראני:
+            הרבה עלים ירוקים, שעועית אדומה ובשר שמתבשל לאט-לאט.
+          </p>
+          <p>
+            זה תבשיל שמחבר אותי לבית, לשורשים ולרגעים שקטים סביב השולחן המשפחתי.
+            לכל סיר יש ריח אחר, לכל ערב יש סיפור משלו – והכול עובר דרך האש הקטנה על הגז.
+          </p>
+        </div>
+        <div class="khoresh-photo">
+          <img src="images/khoresh-sabzi.jpg" alt="חורש סבזי – Khorest Sabzi" />
         </div>
       </div>
     </div>
-    <div class="hero-body">
-      במטבח שלי אני אוהבת לחבר בין טעמים מזרחיים עשירים לבין פשטות יומיומית.
-      הילדים מחכים כל יום לחזור הביתה ולטעום מהסירים, ואני מאמינה שאוכל טוב הוא קודם כל אהבה.
-      באתר הזה אני מזמינה אתכם להיכנס לסיפורי הטעם שלי, צעד אחר צעד, עם מתכונים שאפשר להכין גם באמצע יום עמוס.
-    </div>
   </section>
 
-  <!-- כרטיסים קטנים – מתכונים -->
+  <!-- כרטיסי מתכונים קטנים -->
   <section id="recipes">
-    <h2 class="section-title">כרטיסי מתכון – סיפורי טעם קטנים</h2>
+    <h2 class="section-title">מתכונים בדרך – סיפורי טעם קטנים</h2>
     <div class="recipes-grid">
-      <!-- כרטיס 1 – עם תמונת האוכל שלך -->
       <article class="recipe-card">
-        <span class="tag">מתכון ביתי</span>
-        <img src="images/food-main.jpg" alt="תבשיל ביתי של אדל" />
-        <strong>תבשיל ביתי מנחם</strong>
-        <span>מנה חמה, מלאה ירקות וטעם של בית. מושלם ליום חורף או לארוחת ערב משפחתית.</span>
-      </article>
-
-      <!-- כרטיס 2 -->
-      <article class="recipe-card">
-        <span class="tag">בקרוב</span>
+        <span class="recipe-tag">מתכון ביתי</span>
         <strong>מרק ירקות ליום גשום</strong>
-        <span>מרק עשיר וקל להכנה, עם ירקות צבעוניים והרבה נשמה.</span>
+        <span>מרק חמים, צבעוני ופשוט להכנה – כזה שמחזיר את הילדים הביתה מחויכים.</span>
       </article>
-
-      <!-- כרטיס 3 -->
       <article class="recipe-card">
-        <span class="tag">בקרוב</span>
-        <strong>עוגיות שבת</strong>
-        <span>עוגיות פריכות וקלה להכנה, שהופכות את שבת בבוקר לחגיגה קטנה.</span>
-      </article>
-
-      <!-- כרטיס 4 -->
-      <article class="recipe-card">
-        <span class="tag">בקרוב</span>
+        <span class="recipe-tag">בקרוב</span>
         <strong>אורז חגיגי עם שקדים</strong>
-        <span>אורז לבן רך עם שקדים וצימוקים – בדיוק כמו באירועים המשפחתיים.</span>
+        <span>אורז רך עם שקדים וצימוקים – מנה קלאסית לשולחן שבת וחג.</span>
+      </article>
+      <article class="recipe-card">
+        <span class="recipe-tag">בקרוב</span>
+        <strong>עוגיות שבת</strong>
+        <span>עוגיות רכות ומתוקות שממלאות את הבית בריח של שבת מתקרבת.</span>
       </article>
     </div>
   </section>
 
-  <!-- מתכון חורש סבזי – כרטיס גדול -->
-  <section id="khoresh">
-    <h2 class="section-title">מתכון מיוחד – חורש סבזי</h2>
-    <div class="khoresh-wrapper">
-      <article class="card">
-        <h3>מצרכים</h3>
-        <ul>
-          <li>500 גרם בשר בקר (כתף או צלעות, חתוך לקוביות)</li>
-          <li>בצל גדול אחד, קצוץ דק</li>
-          <li>3 כפות שמן</li>
-          <li>2 כוסות עשבי תיבול קצוצים – כוסברה, פטרוזיליה, בצל ירוק ושמיר</li>
-          <li>5–6 עלי חילבה קצוצים (לא חובה)</li>
-          <li>1/2 כוס שעועית לימה או אדומה (מושרה מראש)</li>
-          <li>2–3 לימונים פרסיים מיובשים או 2 כפות מיץ לימון</li>
-          <li>1 כפית כורכום</li>
-          <li>מלח ופלפל שחור לפי הטעם</li>
-          <li>3 כוסות מים חמים</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>אופן ההכנה</h3>
-        <ol>
-          <li>מטגנים בצל בשמן עד הזהבה.</li>
-          <li>מוסיפים את הבשר ומטגנים עד שמקבל צבע, מוסיפים כורכום ומערבבים.</li>
-          <li>מוסיפים מים חמים ושעועית, מכסים ומבשלים כשעה וחצי–שעתיים עד שהבשר מתרכך.</li>
-          <li>במחבת נפרדת מטגנים את עשבי התיבול כ־10 דקות על אש נמוכה.</li>
-          <li>מוסיפים לסיר את העשבים, הלימונים הפרסיים, מלח ופלפל ומבשלים עוד כ־40 דקות.</li>
-          <li>טועמים ומתקנים תיבול. מגישים חם לצד אורז פרסי לבן.</li>
-        </ol>
-        <p><strong>תבשיל עמוק, ירוק ומלא ריח של בית. בתיאבון ♥</strong></p>
-      </article>
-    </div>
+  <!-- עליי -->
+  <section class="about">
+    <h2 class="section-title">קצת עליי</h2>
+    <p>
+      אני אדל, אמא, אשת משפחה ואוהבת מטבחים חמים.
+      המטבח בשבילי הוא מקום של לימוד, התנסות וצמיחה – בדיוק כמו החיים.
+      אני אוהבת לקחת מתכון מוכר, להוסיף לו נגיעה אישית, ולראות איך הוא הופך לסיפור חדש.
+    </p>
+    <p>
+      באתר הזה אני משלבת בין אהבת האוכל לבין עבודה פנימית – הקשבה לנפש,
+      זמן לחשוב, וליצור רגעים טובים סביב שולחן אחד.
+    </p>
   </section>
 
   <!-- יצירת קשר -->
   <section id="contact" class="contact">
-    <h2 class="section-title">ליצירת קשר</h2>
+    <h2 class="section-title">יצירת קשר</h2>
     <p>אשמח לשיתופים, רעיונות ומתכונים אהובים מהמטבח שלכם.</p>
     <p><strong>טלפון:</strong> 058-7163206</p>
     <p><strong>אימייל:</strong> <a href="mailto:odel3206@gmail.com">odel3206@gmail.com</a></p>
@@ -380,5 +386,3 @@
 
 </body>
 </html>
-
-
