@@ -4,186 +4,210 @@
   <meta charset="utf-8" />
   <title>אדל הלפרין – סיפורי טעם ונשמה</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="אדל הלפרין – סיפורי טעם ונשמה. מטבח איראני ביתי, תבשילים חמים וסיפורי טעם מהלב." />
+  <meta name="description" content="אדל הלפרין – סיפורי טעם ונשמה. מטבח חם, תבשילים עוצמתיים וסיפורי חיים מהלב." />
 
   <!-- גופן יפה בעברית -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    .hero-photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #d9a44f; /* זהב */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-  background: radial-gradient(circle at top, #fff7ec 0, #ffe3e0 40%, #f7f7f7 100%);
-  flex-shrink: 0;
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: contrast(1.05) saturate(1.05);
-}
-
     :root {
-      --bg: #fff9f7;        /* ורוד עדין מאוד */
-      --card: #ffffff;      /* לבן לכרטיסים */
-      --ink: #414141;       /* טקסט כהה */
-      --muted: #7a7a7a;     /* טקסט משני */
-      --green: #4f8f7b;     /* ירוק אלגנטי */
-      --gold: #d9a44f;      /* זהב חם */
-      --pink-soft: #ffe3e0; /* ורוד עדין */
-      --gray-soft: #f1f2f4; /* אפור בהיר */
-      --border-soft: #ead4c5; /* מסגרת רכה */
+      --bg: #FFF3E0;        /* רקע שמנת חם */
+      --card: #FFF9F3;      /* כרטיס שמנת בהיר */
+      --ink: #1C1C1C;       /* טקסט כהה מאוד */
+      --muted: #4a4a4a;     /* טקסט משני */
+      --green: #0B3D2E;     /* ירוק כהה עוצמתי */
+      --gold: #C7A008;      /* זהב בולט */
+      --pink-strong: #D94F70; /* ורוד חזק */
+      --gray-soft: #F3E3D2; /* אפור/שמפניה */
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       font-family: 'Heebo', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
+      background: radial-gradient(circle at top, #FFF8EE 0, var(--bg) 45%, #FDE7C5 100%);
       color: var(--ink);
     }
 
-    a { color: var(--green); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--pink-strong);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
     /* כותרת עליונה */
     header {
-      background: linear-gradient(135deg, #e9f5f0, #ffe6d8);
-      border-bottom: 1px solid var(--border-soft);
-      padding: 14px 16px;
+      background: linear-gradient(135deg, #D94F70 0, #C7A008 45%, #0B3D2E 100%);
+      padding: 16px 16px 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      border-bottom: 4px solid #0B3D2E;
     }
     .header-inner {
-      max-width: 1024px;
+      max-width: 1080px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
+      color: #fff;
     }
     .logo-title {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
     .logo-circle {
-      width: 42px;
-      height: 42px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
-      border: 2px solid var(--gold);
-      background: #fff;
+      border: 4px solid #FFF3C4;
+      background: radial-gradient(circle at top, #FFEDE1 0, #C7A008 70%);
       display: grid;
       place-items: center;
-      font-weight: 700;
-      color: var(--green);
+      font-weight: 900;
+      font-size: 22px;
+      color: #0B3D2E;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
     .site-title {
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--green);
+      font-weight: 900;
+      font-size: 22px;
     }
     .site-sub {
       font-size: 14px;
-      color: var(--muted);
+      opacity: 0.9;
     }
     .nav-links {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
       font-size: 14px;
     }
     .nav-links a {
-      padding: 4px 10px;
+      padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(255,255,255,0.9);
+      border: 2px solid #FFF6DA;
+      background: rgba(0,0,0,0.15);
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.15s ease-out;
+    }
+    .nav-links a:hover {
+      background: #FFF6DA;
+      color: #0B3D2E;
+      transform: translateY(-1px);
     }
 
     main {
-      max-width: 1024px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 22px 16px 40px;
+      padding: 24px 16px 40px;
     }
 
-    /* HERO – תמונה + טקסט עלייך */
+    /* HERO – את והתמונה שלך */
     .hero {
-      background: var(--card);
-      border-radius: 22px;
-      padding: 22px 20px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.04);
-      border: 1px solid var(--border-soft);
-      margin-bottom: 28px;
+      background: linear-gradient(135deg, #FFF9F3 0, #FFE6CC 40%, #FFF9F3 100%);
+      border-radius: 26px;
+      padding: 26px 22px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+      border: 4px solid var(--gold);
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at top right, rgba(217,79,112,0.08) 0, transparent 50%),
+        radial-gradient(circle at bottom left, rgba(199,160,8,0.12) 0, transparent 55%);
+      pointer-events: none;
     }
     .hero-inner {
+      position: relative;
       display: flex;
-      gap: 20px;
+      gap: 24px;
       align-items: center;
       flex-wrap: wrap;
+      z-index: 1;
     }
     .hero-photo {
-      width: 140px;
-      height: 140px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid var(--gold);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      border: 8px solid #FDF3C9; /* מסגרת שמנת/זהב עבה */
+      box-shadow:
+        0 0 0 4px #C7A008,
+        0 12px 28px rgba(0,0,0,0.4);
+      background: radial-gradient(circle at top, #FFFDF5 0, #FEE0D1 40%, #F6D7AF 100%);
       flex-shrink: 0;
     }
     .hero-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
+      filter: contrast(1.08) saturate(1.1);
     }
     .hero-text h1 {
-      margin: 0 0 4px;
-      font-size: 28px;
+      margin: 0 0 6px;
+      font-size: 30px;
       color: var(--green);
+      text-shadow: 0 2px 3px rgba(255,255,255,0.9);
     }
     .hero-text h2 {
-      margin: 0 0 10px;
-      font-size: 18px;
+      margin: 0 0 12px;
+      font-size: 20px;
       color: var(--ink);
+      font-weight: 700;
     }
     .hero-badge {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
-      background: var(--pink-soft);
-      color: var(--green);
+      background: var(--pink-strong);
+      color: #fff;
       font-size: 13px;
-      margin-bottom: 6px;
       font-weight: 600;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      margin-bottom: 6px;
     }
     .hero-text p {
       margin: 0;
       color: var(--muted);
       font-size: 15px;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .section-title {
-      margin: 28px 0 10px;
-      font-size: 22px;
+      margin: 30px 0 14px;
+      font-size: 24px;
       color: var(--green);
+      text-shadow: 0 2px 4px rgba(255,255,255,0.9);
+      border-right: 6px solid var(--gold);
+      padding-right: 10px;
     }
 
-    /* חורש סבזי – בלוק תמונה+טקסט */
+    /* חורש סבזי – בלוק חזק */
     .khoresh-block {
-      background: #fff;
-      border-radius: 20px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
-      padding: 22px 20px;
-      margin-bottom: 26px;
+      background: linear-gradient(135deg, #FFF9F3 0, #FEE3C8 30%, #FFF9F3 100%);
+      border-radius: 24px;
+      border: 4px solid var(--gold);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+      padding: 24px 22px;
+      margin-bottom: 30px;
     }
     .khoresh-inner {
       display: flex;
@@ -193,55 +217,92 @@
       flex-wrap: wrap;
     }
     .khoresh-text {
-      flex: 1 1 260px;
+      flex: 1 1 280px;
     }
     .khoresh-text p {
       margin: 0 0 10px;
       font-size: 15px;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.9;
+    }
+    .khoresh-highlight {
+      font-weight: 700;
+      color: var(--green);
     }
     .khoresh-photo {
       flex: 1 1 260px;
-      max-width: 360px;
+      max-width: 380px;
     }
     .khoresh-photo img {
       width: 100%;
-      border-radius: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      border-radius: 22px;
+      border: 6px solid #FFF;
+      box-shadow:
+        0 0 0 4px var(--gold),
+        0 14px 30px rgba(0,0,0,0.45);
       object-fit: cover;
+      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+    }
+    .khoresh-photo img:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow:
+        0 0 0 4px var(--gold),
+        0 20px 40px rgba(0,0,0,0.55);
     }
 
-    /* כרטיסי מתכונים קטנים */
+    /* כרטיסי מתכונים */
+    .recipes-wrapper {
+      background: rgba(255,255,255,0.5);
+      border-radius: 22px;
+      border: 4px solid var(--gold);
+      padding: 20px 18px 22px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+      margin-bottom: 32px;
+    }
     .recipes-grid {
       display: grid;
-      gap: 16px;
-      margin-bottom: 28px;
+      gap: 18px;
     }
-    @media (min-width: 720px) {
+    @media (min-width: 760px) {
       .recipes-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
     .recipe-card {
       background: var(--card);
-      border-radius: 16px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      border-radius: 18px;
+      border: 4px solid var(--green);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
       padding: 14px 14px 16px;
       font-size: 14px;
       color: var(--muted);
       display: flex;
       flex-direction: column;
       gap: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+    .recipe-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(215,160,8,0.15), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.18s ease-out;
+      pointer-events: none;
+    }
+    .recipe-card:hover::before {
+      opacity: 1;
     }
     .recipe-tag {
       display: inline-block;
-      background: var(--gray-soft);
-      color: var(--green);
-      padding: 2px 8px;
+      background: var(--pink-strong);
+      color: #fff;
+      padding: 2px 10px;
       border-radius: 999px;
       font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     .recipe-card strong {
       font-size: 15px;
@@ -251,43 +312,56 @@
     /* עליי */
     .about {
       background: var(--card);
-      border-radius: 20px;
+      border-radius: 22px;
       padding: 20px 18px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
-      margin-bottom: 26px;
+      border: 4px solid var(--green);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.32);
+      margin-bottom: 28px;
       font-size: 15px;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     /* יצירת קשר */
     .contact {
-      margin-top: 20px;
+      margin-top: 16px;
       font-size: 15px;
       color: var(--muted);
+      background: #FFF9F3;
+      border-radius: 18px;
+      padding: 16px;
+      border: 3px dashed var(--gold);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     }
-    .contact p { margin: 4px 0; }
+    .contact p {
+      margin: 4px 0;
+    }
 
     footer {
-      margin-top: 30px;
-      border-top: 1px solid var(--border-soft);
-      padding: 12px 16px 18px;
+      margin-top: 32px;
+      border-top: 3px solid var(--gold);
+      padding: 14px 16px 20px;
       font-size: 13px;
       text-align: center;
       color: var(--muted);
-      background: #fdf7f3;
+      background: #F5E0C4;
+      box-shadow: 0 -6px 18px rgba(0,0,0,0.3);
     }
 
-    @media (max-width: 600px) {
+    footer span {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
       .hero {
-        padding: 18px 16px;
+        padding: 22px 16px;
       }
       .hero-photo {
-        margin: 0 auto;
+        margin: 0 auto 12px;
       }
       .hero-text h1 {
-        font-size: 24px;
+        font-size: 26px;
       }
     }
   </style>
@@ -300,7 +374,7 @@
       <div class="logo-circle">א</div>
       <div>
         <div class="site-title">אדל הלפרין – סיפורי טעם ונשמה</div>
-        <div class="site-sub">מטבח איראני חם, ביתי ומלא אהבה</div>
+        <div class="site-sub">בין סיר חורש סבזי, ריחות של בית וסיפורי לב על הצלחת</div>
       </div>
     </div>
     <nav class="nav-links">
@@ -317,16 +391,16 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-photo">
+        <!-- חשוב: ודאי שהשם מתאים לשם הקובץ בתיקיית images -->
         <img src="images/adel-bench.jpg" alt="אדל הלפרין" />
       </div>
       <div class="hero-text">
         <span class="hero-badge">סיפורי טעם מנשמה אחת</span>
         <h1>אדל הלפרין</h1>
-        <h2>מטבח איראני ביתי – מקום שבו אוכל, זיכרון ונשמה נפגשים</h2>
+        <h2>מטבח ביתי חזק, צבעוני ומלא זיכרונות טובים</h2>
         <p>
-          כאן אני חולקת מתכונים מהמטבח האיראני והביתי שלי,
-          יחד עם סיפורי טעם קטנים מהיום-יום. כל סיר הוא זיכרון,
-          כל צלחת היא רגע של חום, וכל מתכון נולד מאהבה.
+          כאן אני חולקת מתכונים שנולדו בין סירי החורש סבזי, המרקים והעוגיות של שישי.
+          כל סיר הוא סיפור, כל צלחת היא רגע של חום, וכל מתכון מחבר בין טעם, זיכרון ונשמה.
         </p>
       </div>
     </div>
@@ -334,17 +408,17 @@
 
   <!-- חורש סבזי -->
   <section id="khoresh">
-    <h2 class="section-title">חורש סבזי – טעם של נשמה</h2>
+    <h2 class="section-title">חורש סבזי – תבשיל של עוצמה ונשמה</h2>
     <div class="khoresh-block">
       <div class="khoresh-inner">
         <div class="khoresh-text">
           <p>
-            חורש סבזי הוא אחד התבשילים הכי עמוקים ומנחמים במטבח האיראני:
-            הרבה עלים ירוקים, שעועית אדומה ובשר שמתבשל לאט-לאט.
+            <span class="khoresh-highlight">חורש סבזי</span> הוא תבשיל עמוק, מלא ירוקים, שעועית אדומה ובשר שמתבשל שעות על אש קטנה.
+            זו מנה שמחבקת מבפנים – ריח שממלא את כל הבית וטעימה שמחזירה ישר לזיכרונות של שבתות וחגים.
           </p>
           <p>
-            זה תבשיל שמחבר אותי לבית, לשורשים ולרגעים שקטים סביב השולחן המשפחתי.
-            לכל סיר יש ריח אחר, לכל ערב יש סיפור משלו – והכול עובר דרך האש הקטנה על הגז.
+            עבורי זה לא רק מתכון, זה מקום של שקט. זמן לעמוד ליד הסיר, לערבב, לחשוב, להקשיב ללב
+            ולתת לטעמים להתחבר – בדיוק כמו שהנפש לומדת להתחבר מחדש לעצמה.
           </p>
         </div>
         <div class="khoresh-photo">
@@ -354,25 +428,29 @@
     </div>
   </section>
 
-  <!-- כרטיסי מתכונים קטנים -->
+  <!-- כרטיסי מתכונים -->
   <section id="recipes">
-    <h2 class="section-title">מתכונים בדרך – סיפורי טעם קטנים</h2>
-    <div class="recipes-grid">
-      <article class="recipe-card">
-        <span class="recipe-tag">מתכון ביתי</span>
-        <strong>מרק ירקות ליום גשום</strong>
-        <span>מרק חמים, צבעוני ופשוט להכנה – כזה שמחזיר את הילדים הביתה מחויכים.</span>
-      </article>
-      <article class="recipe-card">
-        <span class="recipe-tag">בקרוב</span>
-        <strong>אורז חגיגי עם שקדים</strong>
-        <span>אורז רך עם שקדים וצימוקים – מנה קלאסית לשולחן שבת וחג.</span>
-      </article>
-      <article class="recipe-card">
-        <span class="recipe-tag">בקרוב</span>
-        <strong>עוגיות שבת</strong>
-        <span>עוגיות רכות ומתוקות שממלאות את הבית בריח של שבת מתקרבת.</span>
-      </article>
+    <h2 class="section-title">מתכונים חזקים בדרך – סיפורי טעם קטנים</h2>
+    <div class="recipes-wrapper">
+      <div class="recipes-grid">
+        <article class="recipe-card">
+          <span class="recipe-tag">מתכון ביתי</span>
+          <strong>מרק ירקות ליום גשום</strong>
+          <span>מרק עמוק, צבעוני ומנחם – כזה שממלא את הבית ריח טוב ומחזיר את כולם לשולחן.</span>
+        </article>
+
+        <article class="recipe-card">
+          <span class="recipe-tag">בקרוב</span>
+          <strong>אורז חגיגי עם שקדים וצימוקים</strong>
+          <span>אורז רך עם שקדים קלויים וצימוקים מתוקים – קלאסיקה לשולחן שבת וחג.</span>
+        </article>
+
+        <article class="recipe-card">
+          <span class="recipe-tag">בקרוב</span>
+          <strong>עוגיות שבת רכות</strong>
+          <span>עוגיות עדינות ומתוקות שמפזרות בבית ריח של שבת מתקרבת והרבה נשמה טובה.</span>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -380,29 +458,31 @@
   <section class="about">
     <h2 class="section-title">קצת עליי</h2>
     <p>
-      אני אדל, אמא, אשת משפחה ואוהבת מטבחים חמים.
-      המטבח בשבילי הוא מקום של לימוד, התנסות וצמיחה – בדיוק כמו החיים.
-      אני אוהבת לקחת מתכון מוכר, להוסיף לו נגיעה אישית, ולראות איך הוא הופך לסיפור חדש.
+      אני אדל, אישה של בית, משפחה ונשמה. המטבח בשבילי הוא לא רק מקום לבישול –
+      הוא מקום לחשוב, להירגע, להתפלל ולהקשיב לעצמי. שם אני מחברת בין חומרי גלם פשוטים
+      לבין רגעים של עומק ורוך.
     </p>
     <p>
-      באתר הזה אני משלבת בין אהבת האוכל לבין עבודה פנימית – הקשבה לנפש,
-      זמן לחשוב, וליצור רגעים טובים סביב שולחן אחד.
+      בתוך כל סיר יש מקום לצמיחה: למדתי שגם במטבח וגם בחיים מותר לטעות,
+      לטעום, לתקן ולהמשיך קדימה. סיפורי הטעם שלי מחברים בין חום של בית,
+      אהבת אדם והקשבה לנפש.
     </p>
   </section>
 
   <!-- יצירת קשר -->
   <section id="contact" class="contact">
     <h2 class="section-title">יצירת קשר</h2>
-    <p>אשמח לשיתופים, רעיונות ומתכונים אהובים מהמטבח שלכם.</p>
+    <p>אשמח לשיתופים, לשאלות ולסיפורי טעם משלכם – מטבח הוא תמיד מקום לשיח משותף.</p>
     <p><strong>טלפון:</strong> 058-7163206</p>
     <p><strong>אימייל:</strong> <a href="mailto:odel3206@gmail.com">odel3206@gmail.com</a></p>
   </section>
 </main>
 
 <footer>
-  © אדל הלפרין – סיפורי טעם ונשמה
+  © <span>אדל הלפרין</span> – סיפורי טעם ונשמה. כל סיר הוא סיפור, כל צלחת היא רגע של לב.
 </footer>
 
 </body>
 </html>
+
 
