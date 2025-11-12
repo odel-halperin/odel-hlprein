@@ -7,205 +7,175 @@
   <meta name="description" content="אדל הלפרין – סיפורי טעם ונשמה. מטבח חם, תבשילים עוצמתיים וסיפורי חיים מהלב." />
 
   <!-- גופן יפה בעברית -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #FFF3E0;        
-      --card: #FFF9F3;      
-      --ink: #1C1C1C;       
-      --muted: #4a4a4a;     
-      --green: #0B3D2E;     
-      --gold: #C7A008;      
-      --pink-strong: #D94F70; 
-      --gray-soft: #F3E3D2; 
+      --bg: #FFF3E0;
+      --card: #FFF9F3;
+      --ink: #1C1C1C;
+      --muted: #4a4a4a;
+      --green: #0B3D2E;
+      --gold: #C7A008;
+      --pink: #D94F70;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: 'Heebo', system-ui, sans-serif;
-      background: radial-gradient(circle at top, #FFF8EE 0, var(--bg) 45%, #FDE7C5 100%);
+      font-family: 'Heebo', sans-serif;
+      background: radial-gradient(circle at top, #FFF8EE 0, var(--bg) 40%, #FDE7C5 100%);
       color: var(--ink);
-    }
-
-    a {
-      color: var(--pink-strong);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
 
     header {
       background: linear-gradient(135deg, #D94F70 0, #C7A008 45%, #0B3D2E 100%);
-      padding: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      padding: 18px;
       border-bottom: 4px solid #0B3D2E;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
 
     .header-inner {
       max-width: 1080px;
       margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
+      align-items: center;
       color: #fff;
+      flex-wrap: wrap;
     }
 
-    .logo-title {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .logo-circle {
-      width: 52px;
-      height: 52px;
+      width: 52px; height: 52px;
       border-radius: 50%;
       border: 4px solid #FFF3C4;
       background: radial-gradient(circle at top, #FFEDE1 0, #C7A008 70%);
       display: grid;
       place-items: center;
+      color: #0B3D2E;
       font-weight: 900;
       font-size: 22px;
-      color: #0B3D2E;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
-    .site-title {
-      font-weight: 900;
-      font-size: 22px;
-    }
-
-    .site-sub {
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 2px solid #FFF6DA;
-      background: rgba(0,0,0,0.15);
+    nav a {
       color: #fff;
-      font-weight: 500;
-      transition: all 0.15s ease-out;
+      margin: 0 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: 0.2s;
     }
 
-    .nav-links a:hover {
-      background: #FFF6DA;
-      color: #0B3D2E;
-      transform: translateY(-1px);
+    nav a:hover {
+      background: #fff;
+      color: var(--green);
     }
 
     main {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 24px 16px 40px;
+      padding: 30px 16px;
     }
 
     .hero {
       background: linear-gradient(135deg, #FFF9F3 0, #FFE6CC 40%, #FFF9F3 100%);
-      border-radius: 26px;
-      padding: 26px 22px;
-      box-shadow: 0 12px 36px rgba(0,0,0,0.25);
       border: 4px solid var(--gold);
-      margin-bottom: 32px;
-    }
-
-    .hero-inner {
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       display: flex;
-      gap: 24px;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
     }
 
     .hero-photo {
-      width: 170px;
+      flex: 0 0 170px;
       height: 170px;
       border-radius: 50%;
       overflow: hidden;
       border: 8px solid #FDF3C9;
       box-shadow: 0 0 0 4px #C7A008, 0 12px 28px rgba(0,0,0,0.4);
-      flex-shrink: 0;
     }
 
     .hero-photo img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       object-position: center;
     }
 
     .hero-text h1 {
-      margin: 0 0 6px;
+      margin: 0;
       font-size: 30px;
       color: var(--green);
     }
 
     .hero-text h2 {
-      margin: 0 0 12px;
+      margin: 4px 0 14px;
       font-size: 20px;
       color: var(--ink);
-      font-weight: 700;
     }
 
-    .hero-badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: var(--pink-strong);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
+    .hero-text p { line-height: 1.8; color: var(--muted); }
 
     .section-title {
-      margin: 30px 0 14px;
-      font-size: 24px;
-      color: var(--green);
       border-right: 6px solid var(--gold);
       padding-right: 10px;
+      color: var(--green);
+      font-size: 24px;
+      margin: 40px 0 20px;
+    }
+
+    .khoresh {
+      background: #FFF9F3;
+      border: 4px solid var(--gold);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+
+    .khoresh img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 0 0 4px var(--gold), 0 10px 24px rgba(0,0,0,0.4);
+      margin-bottom: 16px;
     }
 
     .about {
       background: var(--card);
-      border-radius: 22px;
-      padding: 20px 18px;
       border: 4px solid var(--green);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.32);
-      margin-bottom: 28px;
-      font-size: 15px;
-      color: var(--muted);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.3);
       line-height: 1.9;
+      color: var(--muted);
       text-align: center;
+    }
+
+    .about img {
+      width: 230px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin: 20px auto;
+      display: block;
     }
 
     footer {
       margin-top: 32px;
-      border-top: 3px solid var(--gold);
-      padding: 14px 16px 20px;
-      font-size: 13px;
+      padding: 16px;
       text-align: center;
-      color: var(--muted);
       background: #F5E0C4;
+      border-top: 3px solid var(--gold);
+      color: var(--muted);
     }
 
     footer span {
@@ -214,21 +184,21 @@
     }
   </style>
 </head>
-<body>
 
+<body>
 <header>
   <div class="header-inner">
-    <div class="logo-title">
+    <div class="logo">
       <div class="logo-circle">א</div>
       <div>
         <div class="site-title">אדל הלפרין – סיפורי טעם ונשמה</div>
         <div class="site-sub">בין סיר חורש סבזי, ריחות של בית וסיפורי לב על הצלחת</div>
       </div>
     </div>
-    <nav class="nav-links">
+    <nav>
       <a href="#home">דף הבית</a>
       <a href="#khoresh">חורש סבזי</a>
-      <a href="#recipes">מתכונים</a>
+      <a href="#about">עליי</a>
       <a href="#contact">יצירת קשר</a>
     </nav>
   </div>
@@ -236,40 +206,38 @@
 
 <main id="home">
   <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-photo">
-        <img src="images/adel-bench.jpg" alt="אדל הלפרין" />
-      </div>
-      <div class="hero-text">
-        <span class="hero-badge">סיפורי טעם מנשמה אחת</span>
-        <h1>אדל הלפרין</h1>
-        <h2>מטבח ביתי חזק, צבעוני ומלא זיכרונות טובים</h2>
-        <p>כאן אני חולקת מתכונים שנולדו בין סירי החורש סבזי, המרקים והעוגיות של שישי.</p>
-      </div>
+    <div class="hero-photo">
+      <img src="images/adel-bench.jpg" alt="אדל הלפרין על ספסל">
+    </div>
+    <div class="hero-text">
+      <h1>אדל הלפרין</h1>
+      <h2>מטבח ביתי חזק, צבעוני ומלא נשמה</h2>
+      <p>אני מביאה לכם סיפורי טעם, תבשילים של לב וזיכרונות שמריחים כמו בית. כל סיר הוא השראה, כל טעם הוא רגש.</p>
     </div>
   </section>
 
-  <section id="khoresh">
+  <section id="khoresh" class="khoresh">
     <h2 class="section-title">חורש סבזי – תבשיל של עוצמה ונשמה</h2>
-    <img src="images/khoresh-sabzi.jpg" alt="חורש סבזי – Khorest Sabzi" style="width:100%; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.4); margin-bottom:20px;" />
+    <img src="images/khoresh-sabzi.jpg" alt="חורש סבזי – Khorest Sabzi">
+    <p>תבשיל ירוק עשיר, מלא עלים, שעועית אדומה ובשר שמתבשל שעות על אש קטנה. זו מנה שמחבקת מבפנים, טעימה שמחזירה לזיכרונות של שבתות.</p>
   </section>
 
-  <section class="about">
-    <h2 class="<!-- בתוך סעיף about -->
-<img src="images/adel-bench.jpg"
-     alt="אדל הלפרין על ספסל"
-     style="width:230px; border-radius:50%; box-shadow:0 0 15px rgba(0,0,0,0.3); margin:20px auto; display:block;" />
+  <section id="about" class="about">
+    <h2 class="section-title">קצת עליי</h2>
+    <img src="images/adel-bench.jpg" alt="אדל הלפרין על ספסל">
+    <p>אני אדל, אישה של בית, משפחה ונשמה. המטבח בשבילי הוא מקום של השראה – לחשוב, להירגע, להתפלל ולהקשיב לנפש.  
+    למדתי שגם במטבח וגם בחיים מותר לטעות, לטעום, לתקן ולהמשיך קדימה.  
+    כל מתכון שאני מבשלת נולד מרגע אמיתי של חום ואהבה.</p>
+  </section>
 
-    <img src="images/ChatGPT%20Image%20Nov%209,%202025,%2005_02_07%20PM.png"
-         alt="אדל הלפרין על ספסל"
-         style="width:230px; border-radius:50%; box-shadow:0 0 15px rgba(0,0,0,0.3); margin:20px auto; display:block;" />
-
-    <p>אני אדל, אישה של בית, משפחה ונשמה...</p>
+  <section id="contact" class="about">
+    <h2 class="section-title">יצירת קשר</h2>
+    <p>📞 טלפון: 058-7163206<br>✉️ מייל: <a href="mailto:odel3206@gmail.com">odel3206@gmail.com</a></p>
   </section>
 </main>
 
 <footer>
-  © <span>אדל הלפרין</span> – סיפורי טעם ונשמה
+  © <span>אדל הלפרין</span> – סיפורי טעם ונשמה. כל סיר הוא סיפור, כל צלחת היא רגע של לב.
 </footer>
 
 </body>
