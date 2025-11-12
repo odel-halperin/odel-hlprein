@@ -1,54 +1,137 @@
+/* עיצוב כללי */
+body {
+  margin: 0;
+  font-family: 'Heebo', sans-serif;
+  background: #fff9f3;
+  color: #1C1C1C;
+  line-height: 1.8;
+  direction: rtl;
+}
 
+/* עיצוב כותרת עליונה */
+header {
+  background: linear-gradient(90deg, #d94f70, #c7a008, #0b3d2e);
+  color: white;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-bottom: 4px solid #0b3d2e;
+}
 
-<!doctype html>
-<html lang="he" dir="rtl">
-<head>
-<meta charset="utf-8">
-<title>אדל הלפרין – דף הבית</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-  <div class="container row">
-    <div class="brand">
-      <div class="logo">א</div>
-      <div>
-        <div style="font-weight:800">אדל הלפרין – סיפורי טעם ונשמה</div>
-        <div style="opacity:.9;font-size:14px">בין סירי בית וריחות טובים</div>
-      </div>
-    </div>
-    <nav>
-      <a href="index.html">דף הבית</a>
-      <a href="khoresh.html">חורש סבזי</a>
-      <a href="about.html">עליי</a>
-      <a href="gallery.html">גלריה</a>
-      <a href="recipe-new.html">מתכון חדש</a>
-      <a href="contact.html">יצירת קשר</a>
-      <a href="whatis.html">מה זה?</a> <!-- זה הכפתור שביקשת -->
-    </nav>
-  </div>
-</header>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 0 auto;
+}
 
-<main>
-  <section class="hero">
-    <img src="images/adel.jpg" alt="אדל הלפרין">
-    <div>
-      <h1>ברוכה הבאה למטבח שלי</h1>
-      <p>מתכונים חמים, צבעים חזקים וביס של נשמה.</p>
-    </div>
-  </section>
+/* עיצוב לוגו */
+.logo {
+  width: 45px;
+  height: 45px;
+  background: radial-gradient(circle at top, #ffe, #c7a008);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #0b3d2e;
+  font-weight: 800;
+  font-size: 22px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  margin-left: 10px;
+}
 
-  <section class="card">
-    <h2>ברוכה הבאה</h2>
-    <p>כאן תמצאי סיפורים, טעמים ורגעים מהלב. לחצי על הכפתורים למעלה כדי לגלוש בין העמודים.</p>
-  </section>
-</main>
+/* תפריט ניווט */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-<footer>© אדל הלפרין – סיפורי טעם ונשמה</footer>
-</body>
-</html>
+nav a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background: #fff6da;
+  color: #0b3d2e;
+  transform: translateY(-2px);
+}
+
+/* עיצוב קטע ראשי */
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px 16px 60px;
+}
+
+/* אזור HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #fff, #ffe6cc);
+  border-radius: 22px;
+  padding: 24px;
+  border: 4px solid #c7a008;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 6px solid #fff9c1;
+  box-shadow: 0 0 0 4px #c7a008, 0 12px 20px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+/* כרטיס תוכן */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  border: 3px solid #0b3d2e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* תחתית */
+footer {
+  background: #f5e0c4;
+  border-top: 3px solid #c7a008;
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* התאמה לנייד */
+@media (max-width: 650px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 
 
 
